@@ -1,3 +1,9 @@
+using System;
+using System.Data;
+using System.Data.SqlTypes;
+using Microsoft.SqlServer.Server;
+using System.Text;
+
 [Serializable]
 [SqlUserDefinedAggregate(
     Format.Native,
@@ -13,15 +19,15 @@ public struct OrdersByCustomer1
 
     public void Init()
     {
-	isInitialised = False;
+	isInitialised = false;
     }
 
     public void Accumulate(SqlInt64 ok, SqlInt64 pCount)
     {
-	if(!isInitiliased)
+	if(!isInitialised)
 	{
 		count = pCount;
-		isInitialised = True;
+		isInitialised = true;
 	}
         count += 1;
     }
