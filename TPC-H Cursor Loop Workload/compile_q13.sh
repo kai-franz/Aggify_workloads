@@ -1,0 +1,2 @@
+mcs -reference:System.Data.dll -target:library ../UserDefinedTypes/udt_SingleReturn.cs Q13-CustomerDistribution/Aggregate_customerDistribution.cs -out:OrdersByCustomer1.dll
+docker cp OrdersByCustomer1.dll sql1:/
