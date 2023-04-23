@@ -6,7 +6,7 @@ using System.Text;
 
 [Serializable]
 [Microsoft.SqlServer.Server.SqlUserDefinedType(Format.Native,
-     IsByteOrdered = true, ValidationMethodName = "ValidatePoint")]
+     IsByteOrdered = true)]
 public struct SingleReturn : INullable
 {
     private bool is_Null;
